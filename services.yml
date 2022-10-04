@@ -1,0 +1,12 @@
+---
+  - name: Install Services
+    hosts: all
+    remote_user: ubuntu
+    become: yes
+
+    vars_files:
+    - roles/aws-cli/vars/main.yml
+
+    roles:
+    - docker
+    - aws-cli 
